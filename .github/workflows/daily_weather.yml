@@ -1,11 +1,14 @@
-name: Daily HKO Weather Forecast
+name: Hourly HKO Weather Forecast
 
 on:
   schedule:
-    # Runs at minute 15 of every hour (24 times a day)
-    - cron: '15 * * * *'
-  workflow_dispatch: # Allows manual triggers anytime
-  
+    - cron: '15 * * * *'  # Runs every hour
+  workflow_dispatch:
+
+# Give GitHub write permissions to commit changes back to the repo
+permissions:
+  contents: write
+
 jobs:
   run-weather-script:
     runs-on: ubuntu-latest
@@ -20,8 +23,15 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: |
-          pip install requests pandas
+        run: pip install requests
 
       - name: Run Weather Script
         run: python weather.py
+
+      - name: Commit and push updated README
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Auto-update weather forecast [skip ci]" || exit 0
+          git push
