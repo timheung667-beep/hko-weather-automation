@@ -1,15 +1,20 @@
 import requests
+from datetime import datetime
 
 # 1. Fetch live HKO 9-day forecast
 url = "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en"
 res = requests.get(url)
 data = res.json()
 
-# 2. Extract forecast list
 forecast_list = data.get("weatherForecast", [])
 
-# 3. Print each day line-by-line for clear reading in logs
-print("--- 6:00 AM HKO WEATHER FORECAST ---\n")
+# 2. Build Markdown text for README.md
+now = datetime.now().strftime("%Y-%m-%d %H:%M HKT")
+
+md_content = f"# 🌤️ Live Hong Kong Weather Forecast\n\n"
+md_content += f"*Last updated automatically: **{now}***\n\n"
+md_content += "| Date | Weekday | Temp (°C) | Humidity | Forecast |\n"
+md_content += "| :--- | :--- | :--- | :--- | :--- |\n"
 
 for day in forecast_list:
     date = day.get("forecastDate")
@@ -19,6 +24,10 @@ for day in forecast_list:
     humidity = f"{day.get('forecastMinrh', {}).get('value')}% - {day.get('forecastMaxrh', {}).get('value')}%"
     forecast = day.get("forecastWeather")
     
-    print(f"📅 {date} ({week})")
-    print(f"   🌡️ Temp: {min_t}°C - {max_t}°C | 💧 Humidity: {humidity}")
-    print(f"   ☁️ Forecast: {forecast}\n")
+    md_content += f"| {date} | {week} | {min_t}°C - {max_t}°C | {humidity} | {forecast} |\n"
+
+# 3. Save directly to README.md
+with open("README.md", "w", encoding="utf-8") as f:
+    f.write(md_content)
+
+print("README.md updated successfully!")
