@@ -1,0 +1,27 @@
+name: Daily HKO Weather Forecast
+
+on:
+  schedule:
+    # 22:00 UTC = 06:00 AM HKT (Hong Kong Time)
+    - cron: '0 22 * * *'
+  workflow_dispatch: # Allows manual trigger anytime for testing
+
+jobs:
+  run-weather-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pandas
+
+      - name: Run Weather Script
+        run: python weather.py
