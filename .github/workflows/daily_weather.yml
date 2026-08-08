@@ -2,10 +2,10 @@ name: Daily HKO Weather Forecast
 
 on:
   schedule:
-    # 22:00 UTC = 06:00 AM HKT (Hong Kong Time)
-    - cron: '0 22 * * *'
-  workflow_dispatch: # Allows manual trigger anytime for testing
-
+    # Runs at minute 15 of every hour (24 times a day)
+    - cron: '15 * * * *'
+  workflow_dispatch: # Allows manual triggers anytime
+  
 jobs:
   run-weather-script:
     runs-on: ubuntu-latest
