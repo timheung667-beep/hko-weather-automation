@@ -1,5 +1,5 @@
 import requests
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 
 # 1. Fetch live HKO 9-day forecast
 url = "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en"
@@ -9,7 +9,8 @@ data = res.json()
 forecast_list = data.get("weatherForecast", [])
 
 # 2. Build Markdown text for README.md
-now = datetime.now().strftime("%Y-%m-%d %H:%M HKT")
+hkt_zone = timezone(timedelta(hours=8))
+now = datetime.now(hkt_zone).strftime("%Y-%m-%d %H:%M HKT")
 
 md_content = f"# 🌤️ Live Hong Kong Weather Forecast\n\n"
 md_content += f"*Last updated automatically: **{now}***\n\n"
