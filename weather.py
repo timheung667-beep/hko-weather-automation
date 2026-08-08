@@ -1,26 +1,24 @@
 import requests
-import pandas as pd
 
 # 1. Fetch live HKO 9-day forecast
 url = "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en"
 res = requests.get(url)
 data = res.json()
 
-# 2. Extract forecast items
+# 2. Extract forecast list
 forecast_list = data.get("weatherForecast", [])
-rows = []
-for day in forecast_list:
-    rows.append({
-        "Date": day.get("forecastDate"),
-        "Day": day.get("week"),
-        "Min Temp (°C)": day.get("forecastMintemp", {}).get("value"),
-        "Max Temp (°C)": day.get("forecastMaxtemp", {}).get("value"),
-        "Humidity": f"{day.get('forecastMinrh', {}).get('value')}% - {day.get('forecastMaxrh', {}).get('value')}%",
-        "Forecast": day.get("forecastWeather")
-    })
 
-# 3. Print clean table to GitHub action logs
-pd.set_option('display.max_colwidth', None)
-df = pd.DataFrame(rows)
-print("--- 6:00 AM HKO WEATHER FORECAST ---")
-print(df)
+# 3. Print each day line-by-line for clear reading in logs
+print("--- 6:00 AM HKO WEATHER FORECAST ---\n")
+
+for day in forecast_list:
+    date = day.get("forecastDate")
+    week = day.get("week")
+    min_t = day.get("forecastMintemp", {}).get("value")
+    max_t = day.get("forecastMaxtemp", {}).get("value")
+    humidity = f"{day.get('forecastMinrh', {}).get('value')}% - {day.get('forecastMaxrh', {}).get('value')}%"
+    forecast = day.get("forecastWeather")
+    
+    print(f"📅 {date} ({week})")
+    print(f"   🌡️ Temp: {min_t}°C - {max_t}°C | 💧 Humidity: {humidity}")
+    print(f"   ☁️ Forecast: {forecast}\n")
