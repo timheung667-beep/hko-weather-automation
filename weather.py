@@ -1,4 +1,5 @@
 import requests
+import json
 from datetime import datetime, timezone, timedelta
 
 # 1. Fetch live HKO 9-day forecast
@@ -8,10 +9,11 @@ data = res.json()
 
 forecast_list = data.get("weatherForecast", [])
 
-# 2. Build Markdown text for README.md
+# 2. Get current Hong Kong Time (UTC+8)
 hkt_zone = timezone(timedelta(hours=8))
 now = datetime.now(hkt_zone).strftime("%Y-%m-%d %H:%M HKT")
 
+# 3. Save full Markdown table to README.md
 md_content = f"# 🌤️ Live Hong Kong Weather Forecast\n\n"
 md_content += f"*Last updated automatically: **{now}***\n\n"
 md_content += "| Date | Weekday | Temp (°C) | Humidity | Forecast |\n"
@@ -27,8 +29,21 @@ for day in forecast_list:
     
     md_content += f"| {date} | {week} | {min_t}°C - {max_t}°C | {humidity} | {forecast} |\n"
 
-# 3. Save directly to README.md
 with open("README.md", "w", encoding="utf-8") as f:
     f.write(md_content)
 
-print("README.md updated successfully!")
+# 4. Save concise JSON data for iOS Scriptable Widget
+today = forecast_list[0] if forecast_list else {}
+widget_data = {
+    "date": today.get("forecastDate", ""),
+    "week": today.get("week", ""),
+    "temp": f"{today.get('forecastMintemp', {}).get('value', '')}°C - {today.get('forecastMaxtemp', {}).get('value', '')}°C",
+    "humidity": f"{today.get('forecastMinrh', {}).get('value', '')}% - {today.get('forecastMaxrh', {}).get('value', '')}%",
+    "forecast": today.get("forecastWeather", ""),
+    "updated": now
+}
+
+with open("today.json", "w", encoding="utf-8") as f:
+    json.dump(widget_data, f, indent=2)
+
+print("README.md and today.json updated successfully!")
