@@ -1,6 +1,6 @@
 # 🌤️ Live Hong Kong Weather Forecast
 
-*Last updated automatically: **2026-08-20 03:35 HKT***
+*Last updated automatically: **2026-08-20 05:12 HKT***
 
 | Date | Weekday | Temp (°C) | Humidity | Forecast |
 | :--- | :--- | :--- | :--- | :--- |
