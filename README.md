@@ -1,10 +1,10 @@
 # 🌤️ Live Hong Kong Weather Forecast
 
-*Last updated automatically: **2026-10-08 00:27 HKT***
+*Last updated automatically: **2026-10-08 05:58 HKT***
 
 | Date | Weekday | Temp (°C) | Humidity | Forecast |
 | :--- | :--- | :--- | :--- | :--- |
-| 20261008 | Thursday | 24°C - 29°C | 50% - 75% | Mainly fine and dry. Cloudy periods at first. |
+| 20261008 | Thursday | 24°C - 29°C | 50% - 75% | Mainly fine. Cloudy periods with one or two light rain patches at first. Dry during the day. |
 | 20261009 | Friday | 26°C - 31°C | 50% - 75% | Mainly fine and dry. |
 | 20261010 | Saturday | 26°C - 31°C | 50% - 75% | Fine and dry. |
 | 20261011 | Sunday | 26°C - 31°C | 50% - 75% | Fine and dry. |
