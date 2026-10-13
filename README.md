@@ -1,15 +1,15 @@
 # 🌤️ Live Hong Kong Weather Forecast
 
-*Last updated automatically: **2026-10-13 08:38 HKT***
+*Last updated automatically: **2026-10-13 15:41 HKT***
 
 | Date | Weekday | Temp (°C) | Humidity | Forecast |
 | :--- | :--- | :--- | :--- | :--- |
-| 20261013 | Tuesday | 26°C - 32°C | 55% - 85% | Sunny. Dry and hot during the day. |
-| 20261014 | Wednesday | 26°C - 31°C | 55% - 85% | Mainly fine. Dry during the day. Cloudy periods and one or two light rain patches later. |
+| 20261014 | Wednesday | 26°C - 31°C | 55% - 85% | Mainly fine and dry at first. Cloudy periods and one or two light rain patches later. |
 | 20261015 | Thursday | 26°C - 30°C | 65% - 85% | Sunny periods. One or two light rain patches in the morning and at night. |
 | 20261016 | Friday | 26°C - 30°C | 65% - 85% | Sunny intervals. One or two light rain patches in the morning and at night. |
-| 20261017 | Saturday | 27°C - 31°C | 65% - 85% | Sunny periods. One or two light rain patches at first. |
-| 20261018 | Sunday | 27°C - 31°C | 60% - 80% | Mainly fine. |
-| 20261019 | Monday | 27°C - 31°C | 60% - 80% | Mainly fine. |
-| 20261020 | Tuesday | 27°C - 32°C | 55% - 80% | Fine. Dry and hot during the day. |
-| 20261021 | Wednesday | 26°C - 31°C | 55% - 80% | Sunny periods. |
+| 20261017 | Saturday | 27°C - 31°C | 65% - 85% | Sunny intervals. One or two light rain patches in the morning and at night. |
+| 20261018 | Sunday | 27°C - 31°C | 60% - 85% | Cloudy periods in the morning. Mainly fine and dry during the day. |
+| 20261019 | Monday | 27°C - 32°C | 60% - 80% | Fine. Dry and hot during the day. |
+| 20261020 | Tuesday | 27°C - 32°C | 60% - 80% | Fine. Dry and hot during the day. |
+| 20261021 | Wednesday | 26°C - 31°C | 60% - 80% | Sunny periods. Dry during the day. |
+| 20261022 | Thursday | 25°C - 30°C | 55% - 80% | Sunny periods. Dry during the day. |
