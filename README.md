@@ -1,15 +1,15 @@
 # 🌤️ Live Hong Kong Weather Forecast
 
-*Last updated automatically: **2026-11-16 10:05 HKT***
+*Last updated automatically: **2026-11-16 17:41 HKT***
 
 | Date | Weekday | Temp (°C) | Humidity | Forecast |
 | :--- | :--- | :--- | :--- | :--- |
-| 20261116 | Monday | 23°C - 27°C | 65% - 90% | Sunny periods. Mainly cloudy with one or two light rain patches at night. |
-| 20261117 | Tuesday | 24°C - 27°C | 75% - 90% | Mainly cloudy. One or two rain patches in the morning. Sunny intervals during the day. |
-| 20261118 | Wednesday | 21°C - 26°C | 65% - 95% | Mainly cloudy with a few rain patches. Visibility relatively low in some areas at first. Temperatures will fall appreciably later. |
-| 20261119 | Thursday | 18°C - 22°C | 60% - 85% | Mainly cloudy. Cooler with one or two rain patches in the morning and at night. Bright periods during the day. |
-| 20261120 | Friday | 16°C - 19°C | 60% - 85% | Mainly cloudy with one or two rain patches. It will be cool. |
-| 20261121 | Saturday | 16°C - 21°C | 60% - 80% | Mainly cloudy. Cool in the morning. Bright periods during the day. |
-| 20261122 | Sunday | 19°C - 23°C | 65% - 85% | Sunny intervals. |
+| 20261117 | Tuesday | 23°C - 27°C | 65% - 90% | Mainly cloudy. Sunny periods during the day. |
+| 20261118 | Wednesday | 21°C - 27°C | 65% - 95% | Mainly cloudy. Sunny intervals during the day. One or two rain patches later. Temperatures will fall at night. |
+| 20261119 | Thursday | 18°C - 22°C | 65% - 90% | Mainly cloudy. Cooler with one or two rain patches in the morning and at night. Bright periods during the day. |
+| 20261120 | Friday | 15°C - 18°C | 70% - 90% | Cool and mainly cloudy with one or two rain patches. |
+| 20261121 | Saturday | 16°C - 21°C | 60% - 85% | Cool in the morning. Mainly cloudy. Sunny intervals in the afternoon. |
+| 20261122 | Sunday | 18°C - 22°C | 65% - 85% | Mainly cloudy. Bright periods during the day. |
 | 20261123 | Monday | 21°C - 24°C | 70% - 85% | Mainly cloudy. Sunny intervals during the day. |
-| 20261124 | Tuesday | 21°C - 25°C | 70% - 95% | Mainly cloudy with a few rain patches. Sunny intervals during the day. |
+| 20261124 | Tuesday | 21°C - 24°C | 70% - 90% | Mainly cloudy with one or two rain patches. Sunny intervals during the day. |
+| 20261125 | Wednesday | 20°C - 23°C | 75% - 95% | Mainly cloudy with a few rain patches. |
